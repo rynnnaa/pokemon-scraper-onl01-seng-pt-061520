@@ -22,7 +22,19 @@ class Pokemon
     sql = <<-SQL 
     SELECT * FROM pokemon
     WHERE id = ?
+    LIMIT 1
     SQL
-    db.execute
+    db.execute(sql,id).map do |row|
+      self.new_from_db(row)
+    end.first
+  end
+  
+  def self.new_from_db(row)
+    new_pokemon = self.new 
+    new_pokemon.id = row[0]
+    new_pokemon.name = row[1]
+    new_pokemon.type = row[2]
+    new_pokemon
+  end
     
 end
