@@ -23,5 +23,4 @@ class Pokemon
        Pokemon.new(id: row[0], name: row[1], type: row[2], db: db)
      end
    end
- end
 end
