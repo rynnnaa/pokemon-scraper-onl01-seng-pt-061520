@@ -23,5 +23,6 @@ class Pokemon
     SELECT * FROM pokemon
     WHERE id = ?
     SQL
+    db.execute
     
 end
