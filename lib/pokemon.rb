@@ -25,4 +25,5 @@ class Pokemon
     pokemon_find[0][1]
     pokemon_find[0][2]
     pokemon
+  end
 end
