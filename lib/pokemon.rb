@@ -3,12 +3,11 @@ class Pokemon
   attr_accessor :id, :name, :type, :db
 
   def initialize(keywords)
-    keywords.each {|key, value| self.send(("#{key}="), value)}
+    @id = id
+    @name = name
+    @type = type
+    @db = db
   end
-    # @id = id
-    # @name = name
-    # @type = type
-    # @db = db
   
   def self.save(name, type, db)
     sql = <<-SQL
