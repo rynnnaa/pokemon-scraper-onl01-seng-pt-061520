@@ -1,4 +1,4 @@
-class Pokemon::
+class Pokemom
   
   attr_accessor :id, :name, :type, :db
 
