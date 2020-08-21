@@ -22,6 +22,9 @@ class Pokemon
     pokemon_find = db.execute("SELECT * FROM pokemon WHERE id=?", [id])
     pokemon = self.new(pokemon_find)
     pokemon.id = pokemon_find[0][0]
+    pokemon_find[0][1]
+    pokemon_find[0][2]
+    pokemon
     
     
 end
